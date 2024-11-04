@@ -10,7 +10,6 @@ import pandas as pd
 import networkx as nx
 import duckdb
 
-# from tqdm.auto import tqdm
 from rich.progress import track
 from rich.logging import RichHandler
 import warnings
