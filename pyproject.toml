@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "2024-proteomics-preprocessing"
+version = "1.0.0"
+description = "Small utility script to assign peptides (originating from different samples, possibly from different batches) to proteins"
+authors = ["dr. ir. Koos Rooijers <k.rooijers@sanquin.nl>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyarrow = ">=16.1.0"
+duckdb = ">=1.1.2"
+tqdm = ">=4.66"
+rich = ">=13.7.1"
+pandas = ">=2.2.2,<3"
+networkx = ">=3.3,<4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

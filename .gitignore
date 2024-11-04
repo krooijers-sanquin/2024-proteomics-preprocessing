@@ -1,0 +1,7 @@
+.ipynb_checkpoints/
+README-dev.md
+KR20231004.proteomes.UP000005640.xml.gz
+peptide_assignments.tsv
+tests/data/uniprot_5640_subset.xml
+tests/data/uniprot_5640_subset.xml.gz
+tests/data/uniprot_5640_subset_reference.db
