@@ -63,7 +63,6 @@ def main():
 
     # Read Uniprot metadata
     log.info("Loading Uniprot metadata")
-    # DBFN = "/home/k.rooijers/Desktop/Bioinformatics/Databases/KR20231013.human_omni_gene.db"
     dbconn = duckdb.connect(args.db, read_only=True)
     uniprot_tbl = (
         dbconn.execute("""
@@ -99,7 +98,6 @@ def main():
         ):
             chunk_tbl = chunk_tbl.loc[lambda df: df[["Reverse", "Potential contaminant"]].isna().all(axis=1)]
             peptides_seen.update(chunk_tbl["Sequence"].unique())
-
     log.info("Got %d distinct peptide sequences" % len(peptides_seen))
 
     log.info("Building peptide-to-protein graph")
